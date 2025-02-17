@@ -1,0 +1,12 @@
+package rules
+
+import createCharacters.domain.Ruleset
+import createCharacters.domain.CharacterSheet
+
+rule "D&D 5e"
+when
+   RuleSet(name == "D&D 5e")
+   CharacterSheet(name != null)
+then
+   CharacterSheet strength = 10;
+end
