@@ -46,6 +46,12 @@ hibernate:
     use_second_level_cache: false
     use_query_cache: false
 grails:
+  cors:
+    enabled: true
+    mappings:
+      "/api/**":
+        allowedOrigins: "*"
+        allowedMethods: "GET,POST,PUT,DELETE,OPTIONS"
   mime:
     disable:
       accept:
